@@ -1,0 +1,16 @@
+h1{
+    color: aqua; 
+    background-color: black;
+}
+
+p{
+    color: blueviolet;
+    background-color: antiquewhite;
+    text-align: center;
+    font-weight: normal;
+}
+
+button{
+    color:rgb(229, 233, 229);
+    background-color: brown;
+}
