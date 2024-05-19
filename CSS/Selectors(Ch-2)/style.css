@@ -1,0 +1,84 @@
+/* Universal Selector */
+*{
+    font-family: 'Segoe UI';
+}
+/* Element Selector */
+h1{
+    color: #f52936;
+}
+h3{
+    color: #f52936;
+}
+/* ID selector */
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #f52936;
+    color: white;
+}
+/* Class Selector */
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+/* Descendant Selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+nav ul li a{
+    color: hotpink;
+}
+/* Adjacent Sibling Combinator */
+p+h3{
+    text-decoration: underline;
+}
+.upvote+button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+/* Child Combinator */
+div>input{
+    background-color: darksalmon;
+}
+/* Attribute Selector */
+input[type="text"] {
+    color: red;
+}
+input[type="password"] {
+    color: green;
+}
+input[type] {
+    background-color: bisque;
+}
+/* Pseudo class */
+button:hover{
+    background-color: black;
+    color: white;
+}
+h3:hover{
+    text-decoration: none;
+}
+button:active{
+    color: black;
+    background-color: hotpink;
+}
+p:active{
+    color: green;
+    font-weight: bold;
+}
+input[type="radio"]:checked+label{
+    color: red;
+    font-weight: bold;
+}
+p:nth-of-type(2n) {
+    background-color: bisque;
+}
+/* Pseudo Elements */
+h1::first-letter{
+    color:green;
+}
+p::selection{
+    background-color: burlywood;
+}
