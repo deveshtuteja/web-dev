@@ -82,3 +82,9 @@ h1::first-letter{
 p::selection{
     background-color: burlywood;
 }
+h3{
+    background-color: blanchedalmond;
+}
+h3{
+    background-color: rgb(46, 46, 45);
+}
