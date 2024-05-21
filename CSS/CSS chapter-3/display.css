@@ -1,0 +1,16 @@
+span{
+    /* background-color: yellow; */
+    border: 2px solid black;
+    height: 200px;  /* No effect */
+    width: 200px;  /* no effect */
+    padding: 50px;  /* ONLY L AND R padding */
+    margin: 20px; /* ONLY L AND R margins */
+}
+/* Above things work for div whereas they don't work for span */
+div{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    padding: 50px;  
+    margin: 20px; 
+}

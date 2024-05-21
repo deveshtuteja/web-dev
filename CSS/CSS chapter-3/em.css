@@ -1,0 +1,9 @@
+#outer{
+    font-size: 15px;
+    background-color: antiquewhite;
+}
+#inner{
+    font-size: 2em;
+    padding: 1em;
+    background-color: cadetblue
+}
