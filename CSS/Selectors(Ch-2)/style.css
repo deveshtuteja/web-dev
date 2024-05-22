@@ -76,9 +76,9 @@ p:nth-of-type(2n) {
     background-color: bisque;
 }
 /* Pseudo Elements */
-h1::first-letter{
+/* h1::first-letter{
     color:green;
-}
+} */
 p::selection{
     background-color: burlywood;
 }
