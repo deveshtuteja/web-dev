@@ -1,0 +1,12 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: margin-top 2s steps(6,end) 0.2s;
+}
+div:hover{
+    margin-top: 400px;
+    background-color: blueviolet;
+}

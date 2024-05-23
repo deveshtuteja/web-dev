@@ -1,0 +1,26 @@
+#face{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(243, 174, 48);
+    border-radius: 50%;
+}
+#eye{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 40px;
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+#mouth{
+    height: 50px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 0 0 30% 30%;
+    position: relative;
+    top: 60px;
+    left: 98px;
+}
