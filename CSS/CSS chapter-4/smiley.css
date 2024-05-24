@@ -10,7 +10,7 @@
     background-color: black;
     border-radius: 50%;
     display: inline-block;
-    margin: 40px;
+    margin: 36px;
     position: relative;
     top: 50px;
     left: 30px;
@@ -22,5 +22,5 @@
     border-radius: 0 0 30% 30%;
     position: relative;
     top: 60px;
-    left: 98px;
+    left: 95px;
 }

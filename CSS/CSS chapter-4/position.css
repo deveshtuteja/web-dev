@@ -9,6 +9,7 @@ div{
 #static{
     position: static;
     top: 100px;
+    left: 100px;
     width: 100px;
     background-color: bisque;
 }
