@@ -1,0 +1,19 @@
+#container{
+    height: 500px;
+    width: 80%;
+    border: 2px solid black;
+    margin: 10px auto;
+    display: flex;
+    background-color:blanchedalmond;  
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+h1{
+    text-align: center;
+}
+#container div{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: whitesmoke;
+}
