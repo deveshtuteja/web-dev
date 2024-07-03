@@ -5,15 +5,19 @@
     margin: 10px auto;
     display: flex;
     background-color:blanchedalmond;  
-    flex-direction: column-reverse;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
 }
 h1{
     text-align: center;
 }
 #container div{
-    height: 50px;
-    width: 100px;
+    height: 100px;
+    width: 150px;
     text-align: center;
     color: whitesmoke;
 }
