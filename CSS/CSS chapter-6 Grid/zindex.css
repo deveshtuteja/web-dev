@@ -1,0 +1,21 @@
+#outer{
+    border: 2px solid black;
+    height: 600px;
+    width: 300px;
+}
+.one{
+    background-color: aqua;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+.two{
+    height: 100px;
+    background-color: blanchedalmond;
+    position: relative;
+    bottom: 50px;
+}
+.three{
+    height: 100px;
+    background-color: blueviolet;
+}
