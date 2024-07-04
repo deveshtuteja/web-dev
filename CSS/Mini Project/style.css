@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    background-image: url(./photo.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative; /* Ensure the main_box is the reference point */
+}
+
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above other elements */
+}
+
+.sidebar_menu {
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: left 0.3s ease; /* Add transition for smooth sliding */
+    z-index: 5; /* Ensure the sidebar is above the background */
+}
+
+.sidebar_menu .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    bottom: 0px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 60px; /* Adjust top position to avoid overlapping */
+}
+
+.sidebar_menu .btn_two {
+    color: grey;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 15; /* Ensure the button is above other elements */
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu a,
+.sidebar_menu .menu i {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    left: 25%;
+    top: 590px;
+}
+
+.sidebar_menu .social_media i {
+    padding: 5px;
+    color: white;
+    opacity: 0.5;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one i:hover,
+.btn_two i:hover {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .btn_two {
+    display: block;
+}
+
+
+
