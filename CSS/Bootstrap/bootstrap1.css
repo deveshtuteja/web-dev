@@ -1,4 +1,7 @@
 .container-md{
-    background-color: antiquewhite;
-    text-align: center;
+    /* background-color: antiquewhite; */
+    /* text-align: center; */
+}
+.btn-danger{
+    background-color: aquamarine;
 }
