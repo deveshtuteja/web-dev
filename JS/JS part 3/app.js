@@ -16,3 +16,7 @@ console.log(str1.slice(1,4));
 let str2="workhard";
 console.log(str2.slice(-2));
 console.log(str2.repeat(3));
+
+//Practice QUES 3
+let name="ApnaCollege";
+console.log(name.slice(4).replace("l","t").replace("l","t"));
