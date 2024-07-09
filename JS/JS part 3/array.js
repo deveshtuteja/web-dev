@@ -13,3 +13,6 @@ let months=["january","july","march","august"];
 
 //splice
 months.splice(0,2,"july","june");
+
+//tic-tac-toe game state using nested arrays
+let ticTactoe=[['X',null,'O'],[null,'X',null],['O',null,'X']];
