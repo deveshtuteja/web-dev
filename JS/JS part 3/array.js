@@ -4,9 +4,12 @@ let cars=["audi","bmw","xuv","maruti"];
 cars.push("toyota");
 cars.pop();
 
-//prac Q
+// //prac Q
 let months=["january","july","march","august"];
-months.shift();
-months.shift();
-months.unshift("june");
-months.unshift("july");
+// months.shift();
+// months.shift();
+// months.unshift("june");
+// months.unshift("july");
+
+//splice
+months.splice(0,2,"july","june");
