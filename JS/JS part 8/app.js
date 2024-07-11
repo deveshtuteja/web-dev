@@ -86,5 +86,38 @@ let obj1={...odd}; //conv array to object
 //key:value pairs->key=index and value=arr[i]
 //*SAME IN STRINGS*//
 
+//REST
+function sum(...args){ //arguments->basically a collection(not an array)
+    // for(let i=0;i<args.length;i++){
+    //     console.log("you gave us:",args[i]);
+    // }
+    return args.reduce((sum,el)=>sum+el);
+}
+function minimum(msg,...args){
+    console.log(msg);
+    return args.reduce((min,el)=>{
+        if(min>el){
+            return el;
+        } else {
+            return min;
+        }
+    });
+}
+//Destructuring
+let names=["devesh","yash","jayant","deven","gaurish","manan"];
+// let winner=names[0];
+// let runnersup=names[1];
+// let third=names[2];
+let [winner,runnersup,...others]=names;
 
+//Destructuring(objects)
+const student={
+    name:"devesh",
+    age:19,
+    username:"devu@123",
+    password:"abcd",
+    city:"Gurgaon"
+};
+// let {username,password}=student;
+let {username:user,password:pwd,city="Mumbai"}=student;
 
