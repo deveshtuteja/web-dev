@@ -76,3 +76,22 @@ setTimeout(()=>{
     clearInterval(id1);
     console.log("clear interval ran");
 },10000)
+
+//Assignment Ques
+//Q1
+const arrayAvg=(arrN)=>{
+    let sum=0;
+    for(let i=0;i<arrN.length;i++){
+        sum+=arrN[i];
+    }
+    return sum/arrN.length;
+};
+//Q2
+const isEven=(n)=>{
+    // if(n%2==0){
+    //     console.log("it is a even number");
+    // } else {
+    //     console.log("not an even number");
+    // }
+    return (n%2==0);
+}
