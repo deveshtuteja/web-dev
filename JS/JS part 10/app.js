@@ -63,21 +63,39 @@
 // })
 
 //form events
-let form=document.querySelector("form");
-form.addEventListener("submit",function(event){
-    event.preventDefault();
-    // let inp=document.querySelector("input");
-    // console.dir(inp);
-    // console.log(inp.value);
+// let form=document.querySelector("form");
+// form.addEventListener("submit",function(event){
+//     event.preventDefault();
+//     // let inp=document.querySelector("input");
+//     // console.dir(inp);
+//     // console.log(inp.value);
 
-    console.dir(form); //form contains elements collection
+//     // console.dir(form); //form contains elements collection
 
-    // let user=document.querySelector(".user");
-    // let pass=document.querySelector(".pwd");
+//     // let user=document.querySelector(".user");
+//     // let pass=document.querySelector(".pwd");
 
-    let user=this.elements[0]; //form.elements[0];
-    let pass=this.elements[1];
+//     // let user=this.elements[0]; //form.elements[0];
+//     // let pass=this.elements[1];
 
-    alert(`Hey ${user.value}!, The password you entered is ${pass.value}`);
-});
+//     // alert(`Hey ${user.value}!, The password you entered is ${pass.value}`);
+// });
+// let user=document.querySelector(".user");
+// user.addEventListener("change",function(){
+//     console.log("change event");
+//     console.log("final value:",this.value);
+// });
+
+// user.addEventListener("input",function(){
+//     console.log("input event");
+//     console.log("final value:",this.value);
+// });
+let p=document.querySelector("p");
+let inp=document.querySelector("#txt");
+inp.addEventListener("input",function(){
+    console.log(inp.value);
+    p.innerText=inp.value;
+})
+
+
 
