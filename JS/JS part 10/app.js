@@ -42,22 +42,42 @@
 // h3.addEventListener("click",colorBlue);
 
 // p.addEventListener("click",colorBlue);
-
-let input=document.querySelector("input");
-input.addEventListener("keydown",function(event){
-    console.log("code:",event.code);
-    if(event.code=="ArrowUp"){
-        console.log("Characters moves forward");
-    } else if(event.code=="ArrowDown"){
-        console.log("Characters moves downward")
-    }else if(event.code=="ArrowRight"){
-        console.log("Characters moves right")
-    }else if(event.code=="ArrowLeft"){
-        console.log("Characters moves left")
-    } else {
-        console.log("Wrong key pressed");
-    }
-})
+//CHARACTER GAME
+// let input=document.querySelector("input");
+// input.addEventListener("keydown",function(event){
+//     console.log("code:",event.code);
+//     if(event.code=="ArrowUp"){
+//         console.log("Characters moves forward");
+//     } else if(event.code=="ArrowDown"){
+//         console.log("Characters moves downward")
+//     }else if(event.code=="ArrowRight"){
+//         console.log("Characters moves right")
+//     }else if(event.code=="ArrowLeft"){
+//         console.log("Characters moves left")
+//     } else {
+//         console.log("Wrong key pressed");
+//     }
+// })
 // input.addEventListener("keyup",function(){
 //     console.log("key was released");
 // })
+
+//form events
+let form=document.querySelector("form");
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+    // let inp=document.querySelector("input");
+    // console.dir(inp);
+    // console.log(inp.value);
+
+    console.dir(form); //form contains elements collection
+
+    // let user=document.querySelector(".user");
+    // let pass=document.querySelector(".pwd");
+
+    let user=this.elements[0]; //form.elements[0];
+    let pass=this.elements[1];
+
+    alert(`Hey ${user.value}!, The password you entered is ${pass.value}`);
+});
+
