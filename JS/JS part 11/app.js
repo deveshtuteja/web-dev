@@ -58,13 +58,19 @@ function saveToDb(data) {
         }
     });
 }
-
+//PROMISE CHAINING
 saveToDb("apna college")
     .then(()=>{
-    console.log("promise was resolved");
-    console.log(request);
+    console.log("data1 saved");
+    return saveToDb("hello world");
 })
+    .then(()=>{
+        console.log("data2 saved"); 
+        return saveToDb("virat");
+    })
+    .then(()=>{
+        console.log("data3 saved");
+    })
     .catch(()=>{
     console.log("promise was rejected");
-    console.log(request);
 });
