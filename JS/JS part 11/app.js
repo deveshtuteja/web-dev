@@ -9,11 +9,37 @@ h1 = document.querySelector("h1");
 //     },delay);
 // };
 
-// changeColor("red",1000,()=>{
-//     changeColor("orange",1000,()=>{
-//         changeColor("green",1000,()=>{
-//             changeColor("yellow",1000,()=>{
-//                 changeColor("blue",1000);
+function changeColor(color, delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve("color changed!")
+        }, delay);
+    });
+};
+
+changeColor("red",1000) 
+.then(()=>{
+    console.log("red colour was completed");
+    return changeColor("green",1000);
+})
+.then(()=>{
+    console.log("green colour was completed");
+    return changeColor("blue",1000);
+})
+.then(()=>{
+    console.log("blue colour was completed");
+    return changeColor("yellow",1000);
+})
+.then(()=>{
+    console.log("yellow colour was completed");
+})
+
+// changeColor("red", 1000, () => {
+//     changeColor("orange", 1000, () => {
+//         changeColor("green", 1000, () => {
+//             changeColor("yellow", 1000, () => {
+//                 changeColor("blue", 1000);
 //             });
 //         });
 //     });
@@ -48,29 +74,33 @@ h1 = document.querySelector("h1");
 //     });
 
 //PROMISES IN JS
-function saveToDb(data) {
-    return new Promise((resolve,reject)=>{
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-            if (internetSpeed > 4) {
-                resolve("sucess:data was saved");
-            } else {
-                reject("failure:weak connection");
-        }
-    });
-}
-//PROMISE CHAINING
-saveToDb("apna college")
-    .then(()=>{
-    console.log("data1 saved");
-    return saveToDb("hello world");
-})
-    .then(()=>{
-        console.log("data2 saved"); 
-        return saveToDb("virat");
-    })
-    .then(()=>{
-        console.log("data3 saved");
-    })
-    .catch(()=>{
-    console.log("promise was rejected");
-});
+// function saveToDb(data) {
+//     return new Promise((resolve,reject)=>{
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//             if (internetSpeed > 4) {
+//                 resolve("sucess:data was saved");
+//             } else {
+//                 reject("failure:weak connection");
+//         }
+//     });
+// }
+// //PROMISE CHAINING
+// saveToDb("apna college")
+//     .then((result)=>{
+//     console.log("data1 saved");
+//     console.log("result of promise:",result);
+//     return saveToDb("hello world");
+// })
+//     .then((result)=>{
+//         console.log("data2 saved");
+//         console.log("result of promise:",result);
+//         return saveToDb("virat");
+//     })
+//     .then((result)=>{
+//         console.log("data3 saved");
+//         console.log("result of promise:",result);
+//     })
+//     .catch((error)=>{
+//     console.log("promise was rejected");
+//     console.log("error of promise:",error);
+// });
