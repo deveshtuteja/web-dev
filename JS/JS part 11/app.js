@@ -29,23 +29,23 @@ h1 = document.querySelector("h1");
 //         failure();
 //     }
 // }
-saveToDb("apna college",
-    () => {
-        console.log("success:Your data was saved");
-        saveToDb("Devesh", () => {
-            console.log("success2:Your data was saved");
-            saveToDb("Virat", () => {
-                console.log("sucess3:Your data was saved");
-            }, () => {
-                console.log("failure3:Weak connection");
-            });
-        }, () => {
-            console.log("failure2:Weak connection");
-        });
-    },
-    () => {
-        console.log("failure:Weak connection");
-    });
+// saveToDb("apna college",
+//     () => {
+//         console.log("success:Your data was saved");
+//         saveToDb("Devesh", () => {
+//             console.log("success2:Your data was saved");
+//             saveToDb("Virat", () => {
+//                 console.log("sucess3:Your data was saved");
+//             }, () => {
+//                 console.log("failure3:Weak connection");
+//             });
+//         }, () => {
+//             console.log("failure2:Weak connection");
+//         });
+//     },
+//     () => {
+//         console.log("failure:Weak connection");
+//     });
 
 //PROMISES IN JS
 function saveToDb(data) {
@@ -57,4 +57,14 @@ function saveToDb(data) {
                 reject("failure:weak connection");
         }
     });
-}    
+}
+
+saveToDb("apna college")
+    .then(()=>{
+    console.log("promise was resolved");
+    console.log(request);
+})
+    .catch(()=>{
+    console.log("promise was rejected");
+    console.log(request);
+});
