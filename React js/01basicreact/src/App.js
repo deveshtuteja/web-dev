@@ -1,7 +1,12 @@
-
+//COMPONENT
+import Chai from "./Chai";
 function App() {
   return (
-    <h1>Chai aur React | Devesh Tuteja</h1>
+    //fragment concept. Single tag return in vite also
+    <>
+     <Chai/>
+    </>
+   
   );
 }
 
