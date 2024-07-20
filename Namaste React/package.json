@@ -1,0 +1,19 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/deveshtuteja/web-dev)"
+  },
+  "keywords": [],
+  "author": "\"Akshay Saini\"",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0" 
+  }
+}
