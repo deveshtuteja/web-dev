@@ -30,6 +30,10 @@ const Title=()=>
 const HeadingComponent = () => 
 <div id="container">
     <Title/>
+    <Title></Title>
+    {Title()}
+    {/* any piece of javascript code */}
+    {console.log("hbfkjnkdfkjdn")}
     <h1 className="heading"> Namaste React FUNCTIONAL COMPONENT </h1>
 </div>
 
