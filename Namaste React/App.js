@@ -1,42 +1,84 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//React.createElement => JS OBJECT => Render() => HTMLElement
+/*
+*HEADER
+    logo
+    nav items
+*BODY
+    search
+    RestaurantContainer
+        restaurantCard
+            img
+            name of res, star rating, cuisine, del time
+*FOOTER
+    copyright
+    links
+    address
+    contact        
+*/
 
-const heading = React.createElement("h1", { id: "heading" }, "Hello i'm HEADING");
-console.log(heading);
+const Header = () => {
+    return (
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" src="https://media.istockphoto.com/id/1435983029/vector/food-delivery-logo-images.jpg?s=612x612&w=0&k=20&c=HXPxcjOxUiW4pMW1u9E0k2dJYQOU37a_0qZAy3so8fY=" />
+            </div>
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
 
-//JSX(transpiled before it reaches JS engine) - PARCEL - BABEL
-//JSX => babel transpiles it into React.createElement => JS OBJECT => Render() => HTMLElement
+const RestaurantCard=()=>{
+    return (
+        <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
+            <img className="res-logo" alt="burger-xpress" src="https://media-assets.swiggy.com/swiggy/image/upload/b50fd640f2c0ddab74d62ef8ccbaef4c" />
+            <h3>Burger Xpress</h3>
+            <h4>Burgers, Continental</h4>
+            <h4>4.2 stars</h4>
+            <h4>20-25 MINS</h4>
+        </div>
+    )
+}
 
-//JSX-> HTML-like syntax
-const jsxHeading = (
-<h1 id="heading" className="head">
-    Namaste React using JSX🚀
-</h1>
-);
-console.log(jsxHeading);
+const Body=()=>{
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+            </div>
+        </div>
+    )
+}
 
-const Title=()=>
-    <h1>Devesh Tuteja</h1>
-
-//REACT COMPONENT
-// const HeadingComponent = () => {
-//     return <h1 className="heading"> Namaste React FUNCTIONAL COMPONENT </h1>;
-// }
-//these two are same
-
-//Component Composition -> Components inside Components
-const HeadingComponent = () => 
-<div id="container">
-    <Title/>
-    <Title></Title>
-    {Title()}
-    {/* any piece of javascript code */}
-    {console.log("hbfkjnkdfkjdn")}
-    <h1 className="heading"> Namaste React FUNCTIONAL COMPONENT </h1>
-</div>
+const AppLayout = () => {
+    return (
+        <div className="app">
+            <Header />
+            <Body />
+        </div>
+    ) 
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent/>);
+root.render(<AppLayout />);
