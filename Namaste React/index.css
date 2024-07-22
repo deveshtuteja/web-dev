@@ -39,3 +39,7 @@
     width: 100%;
     height: 130px;
 }
+.filter{
+    margin: 10px;
+    cursor: pointer;
+}
