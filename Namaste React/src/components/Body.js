@@ -24,7 +24,7 @@ const Body = () => {
         return <Shimmer />
     }
 
-    return (
+    return listOfRes===0 ? <Shimmer /> : (
         <div className="body">
             <div className="filter">
                 <button className="filter-btn"
