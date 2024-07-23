@@ -20,8 +20,8 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
         //Optional Chaining
-        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     //Conditional Rendering
     return listOfRes.length === 0 ? <Shimmer /> : (
@@ -33,16 +33,16 @@ const Body = () => {
                     }} />
                     <button onClick={() => {
                         console.log(searchText);
-                        const filteredRes = listOfRes.filter((res) => 
+                        const filRes = listOfRes.filter((res) => 
                             res.info.name.toLowerCase().includes(searchText.toLowerCase())
                         );
-                        setFilteredRes(filteredRes);
+                        setFilteredRes(filRes);
                     }}>Search</button>
                 </div>
                 <button className="filter-btn"
                     onClick={() => {
-                        const filteredList =listOfRes.filter((res) => res.info.avgRating > 4.5);
-                        setFilteredRes(filteredList);
+                        const filtList =listOfRes.filter((res) => res.info.avgRating > 4.5);
+                        setFilteredRes(filtList);
                     }}>Top Rated Restaurants</button>
             </div>
             <div className="res-container">
