@@ -20,8 +20,8 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
         //Optional Chaining
-        setListOfRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRes(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     //Conditional Rendering
     return listOfRes.length === 0 ? <Shimmer /> : (
