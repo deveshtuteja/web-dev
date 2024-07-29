@@ -7,7 +7,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
     //local state var->super powerful react var
     const [listOfRes, setListOfRes] = useState([]);
-    const[filteredRes, setFilteredRes]=useState([]);
+    const [filteredRes, setFilteredRes] = useState([]);
     const [searchText, setSearchText] = useState("");
     console.log("body rendered");
 
@@ -26,34 +26,36 @@ const Body = () => {
         setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
-    const onlineStatus=useOnlineStatus();
-    if(onlineStatus===false) return  <h1>Looks like you're offline! Please check your internet connection</h1> ;
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus === false) return <h1>Looks like you're offline! Please check your internet connection</h1>;
 
     //Conditional Rendering
     return listOfRes.length === 0 ? <Shimmer /> : (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            <div className="flex">
+                <div className="search my-4 mx-1 p-4">
+                    <input type="text" className="border border-black" value={searchText} onChange={(e) => {
                         setSearchText(e.target.value);
                     }} />
-                    <button onClick={() => {
+                    <button className="m-4 px-4 py-1 bg-green-100 rounded-lg" onClick={() => {
                         console.log(searchText);
-                        const filRes = listOfRes.filter((res) => 
+                        const filRes = listOfRes.filter((res) =>
                             res.info.name.toLowerCase().includes(searchText.toLowerCase())
                         );
                         setFilteredRes(filRes);
                     }}>Search</button>
                 </div>
-                <button className="filter-btn"
-                    onClick={() => {
-                        const filtList =listOfRes.filter((res) => res.info.avgRating > 4.5);
-                        setFilteredRes(filtList);
-                    }}>Top Rated Restaurants</button>
+                <div className="m-4 p-4">
+                    <button className="my-4 mx-1 px-4 py-1 bg-gray-100 rounded-lg"
+                        onClick={() => {
+                            const filtList = listOfRes.filter((res) => res.info.avgRating > 4.5);
+                            setFilteredRes(filtList);
+                        }}>Top Rated Restaurants</button>
+                </div>
             </div>
-            <div className="res-container">
+            <div className="res-container flex flex-wrap">
                 {filteredRes.map((restaurant) => (
-                    <Link style={{textDecoration:"none", color:"black"}} key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}> <RestaurantCard resData={restaurant.info} /> </Link>     
+                    <Link style={{ textDecoration: "none", color: "black" }} key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}> <RestaurantCard resData={restaurant.info} /> </Link>
                 ))}
             </div>
         </div>
