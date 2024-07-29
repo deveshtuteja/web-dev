@@ -24,4 +24,7 @@ const RestaurantCard = ({ resData }) => {
     );
   };
 
+  //Higher order component
+  //input RestaurantCard=>RestaurantCardPromoted
+
   export default RestaurantCard;
