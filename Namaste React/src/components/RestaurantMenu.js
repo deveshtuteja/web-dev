@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
     const { resId } = useParams();
     const resInfo = useRestaurantMenu(resId);
 
-    const [showIndex, setShowIndex]=useState(null);
+    const [showIndex, setShowIndex] = useState(null);
 
     if (resInfo === null) return <Shimmer />;
 
@@ -28,7 +28,14 @@ const RestaurantMenu = () => {
             <p className="font-bold text-lg">{Array.isArray(cuisines) ? cuisines.join(", ") : <Shimmer />} - {costForTwoMessage}</p>
             {/* Categories-accordion */}
             {categories.length > 0 ? (
-                categories.map((category,index) => <RestaurantCategory data={category?.card?.card} showList={index===showIndex?true:false} setShowIndex={()=>setShowIndex(index)}/>) 
+                categories.map((category, index) => (
+                    <RestaurantCategory
+                        key={index}
+                        data={category?.card?.card}
+                        showList={index === showIndex}
+                        setShowIndex={() => setShowIndex(showIndex === index ? null : index)}
+                    />
+                ))
             ) : (
                 <Shimmer />
             )}
@@ -37,4 +44,5 @@ const RestaurantMenu = () => {
 };
 
 export default RestaurantMenu;
+
 
