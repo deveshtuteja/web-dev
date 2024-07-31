@@ -22,8 +22,8 @@ const Body = () => {
         const json = await data.json();
 
         //Optional Chaining
-        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]);
+        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]);
     };
 
     const onlineStatus = useOnlineStatus();

@@ -19,6 +19,9 @@ const Cart = () => {
             >
                 Clear Cart
             </button>
+            <div>
+                {cartItems.length===0 ? <h3>Your cart is empty. Please add items.</h3> : null}
+            </div>
         </div>
     )
 }

@@ -13,7 +13,9 @@ const cartSlice=createSlice({
             state.items.pop();
         },
         clearCart:(state)=>{
+            // can't do state=[] because it ref to a new obj. creates a copy of local var
             state.items.length=0;
+            // can return { items:[] }; it replaces the state with this new object and does the same job
         },
     },
 });
