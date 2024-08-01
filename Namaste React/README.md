@@ -3,10 +3,12 @@
 ## Structure
 
 ### HEADER
+
 - Logo
 - Nav items
 
 ### BODY
+
 - Search
 - RestaurantContainer
   - RestaurantCard
@@ -14,6 +16,7 @@
     - Name of restaurant, star rating, cuisine, delivery time
 
 ### FOOTER
+
 - Links
 - Address
 - Contact
@@ -26,65 +29,60 @@ This guide will help you set up testing for your React application using React T
 
 1. **Install React Testing Library:**
 
-    Open your terminal and run:
-    ```bash
-    npm install @testing-library/react
-    ```
+   npm install @testing-library/react
 
 2. **Install Jest:**
 
-    Run the following command:
-    ```bash
-    npm install jest
-    ```
+   npm install jest
 
 3. **Install Babel dependencies:**
 
-    Execute this command to install Babel:
-    ```bash
-    npm install @babel/core @babel/preset-env
-    ```
+   npm install @babel/core @babel/preset-env
 
 4. **Configure Babel:**
 
-    Create a `.babelrc` file in the root of your project and add the following configuration:
-    ```json
-    {
-      "presets": ["@babel/preset-env", "@babel/preset-react"]
-    }
-    ```
+   Create a `.babelrc` file in the root of your project and add the following configuration:
+
+   ```json
+   {
+     "presets": ["@babel/preset-env", "@babel/preset-react"]
+   }
+   ```
 
 5. **Configure Parcel Config File to Disable Default Babel Transpilation:**
 
 6. **Initialize Jest:**
 
-    Run this command to initialize Jest:
-    ```bash
-    npx jest --init
-    ```
+   Run this command to initialize Jest:
 
-    Follow the prompts to set up Jest according to your preferences.
+   ```bash
+   npx jest --init
+   ```
+
+   Follow the prompts to set up Jest according to your preferences.
 
 7. **Install jsdom library:**
 
-    Run the following command to install jsdom:
-    ```bash
-    npm install jsdom
-    ```
+   Run the following command to install jsdom:
+
+   ```bash
+   npm install jsdom
+   ```
 
 8. **Install @babel/preset-react to Make JSX Work in Test Cases:**
 
-    Use this command to install the preset:
-    ```bash
-    npm install @babel/preset-react
-    ```
+   Use this command to install the preset:
+
+   ```bash
+   npm install @babel/preset-react
+   ```
 
 9. **Include @babel/preset-react in Your Babel Config:**
 
-    Make sure your `.babelrc` file includes `@babel/preset-react` as shown in the Babel configuration step.
+   Make sure your `.babelrc` file includes `@babel/preset-react` as shown in the Babel configuration step.
 
 10. **Install @testing-library/jest-dom**
 
     npm i -D @testing-library/jest-dom
----
 
+---
