@@ -60,7 +60,7 @@ const Body = () => {
                     <input type="text" className="border border-black p-2" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
                 </div>
             </div>
-            <div className="res-container flex flex-wrap">
+            <div className="res-container flex flex-wrap justify-center gap-7 px-12">
                 {filteredRes.map((restaurant) => (
                     <Link style={{ textDecoration: "none", color: "black" }} key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}> <RestaurantCard resData={restaurant.info} /> </Link>
                 ))}
