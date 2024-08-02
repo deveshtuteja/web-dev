@@ -2,7 +2,25 @@ import { render, screen } from "@testing-library/react"
 import Contact from "../Contact"
 import "@testing-library/jest-dom"
 //it and test are same
+
+
 describe("Contact Us Page test cases", () => {
+    //helper functions
+    beforeAll(() => {
+        console.log("before all");
+    })
+
+    beforeEach(() => {
+        console.log("before each");
+    })
+    afterAll(() => {
+        console.log("after all");
+    })
+
+    afterEach(() => {
+        console.log("after each");
+    })
+
     it("Should load contact us component", () => {
         render(<Contact />);
 
