@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-import { useContext, useEffect, useState} from "react";
+import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -20,23 +20,24 @@ const Body = () => {
     const fetchData = async () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4738044&lng=77.01067610000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
+        console.log(json);
 
         //Optional Chaining
-        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]);
-        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||[]);
+        setListOfRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+        setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
     };
 
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false) return <h1>Looks like you're offline! Please check your internet connection</h1>;
 
-    const {loggedInUser,setUserName}=useContext(UserContext);
+    const { loggedInUser, setUserName } = useContext(UserContext);
 
     //Conditional Rendering 
     return listOfRes.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="flex items-center">
                 <div className="search my-4 mx-1 p-4">
-                    <input type="text" className="border border-black" value={searchText} onChange={(e) => {
+                    <input type="text" className="border border-black" value={searchText} data-testid="searchBox" onChange={(e) => {
                         setSearchText(e.target.value);
                     }} />
                     <button className="m-4 px-4 py-1 bg-green-100 rounded-lg" onClick={() => {
@@ -56,7 +57,7 @@ const Body = () => {
                 </div>
                 <div className="m-4 p-4">
                     <label>Username:</label>
-                    <input type="text" className="border border-black p-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
+                    <input type="text" className="border border-black p-2" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
                 </div>
             </div>
             <div className="res-container flex flex-wrap">
