@@ -4,8 +4,8 @@ import { ITEM_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
 
-    const dispatch=useDispatch();
-    const handleAddItem=(item)=>{
+    const dispatch = useDispatch();
+    const handleAddItem = (item) => {
         //dispatch an action
         dispatch(addItems(item));
     }
@@ -13,8 +13,9 @@ const ItemList = ({ items }) => {
     return (
         <div>
             {items.map((item) => (
-                <div 
-                    key={item.card.info.id} 
+                <div
+                    data-testid="foodItems"
+                    key={item.card.info.id}
                     className="m-2 p-2 border-gray-200 border-b-2 text-left flex justify-between items-center"
                 >
                     <div className="w-9/12">
@@ -28,14 +29,14 @@ const ItemList = ({ items }) => {
                     </div>
                     <div className="w-3/12 flex flex-col items-center">
                         {/* Adjusting the size and appearance of the image */}
-                        <img 
-                            src={ITEM_URL + item.card.info.imageId} 
-                            className="w-24 h-24 object-cover rounded-md mb-2" 
+                        <img
+                            src={ITEM_URL + item.card.info.imageId}
+                            className="w-24 h-24 object-cover rounded-md mb-2"
                         />
                         {/* Styling the button with better visual appearance and interactivity */}
-                        <button 
+                        <button
                             className="p-2 bg-white text-green-500 border border-green-500 rounded-sm hover:bg-green-500 hover:text-white transition"
-                            onClick={()=>handleAddItem(item)}
+                            onClick={() => handleAddItem(item)}
                         >
                             Add+
                         </button>
